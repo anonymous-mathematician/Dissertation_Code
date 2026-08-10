@@ -5,7 +5,7 @@ This repository contains the Python code used for the numerical experiments in S
 ## Files
 
 - `BSB_Code.ipynb` contains the Black--Scholes--Barenblatt benchmark used to check the Deep BSDE implementation.
-- `BSDE_Code.ipynb` contains the numerical experiments for the singular two-particle moving-boundary FBSDE, including the direct Deep BSDE and cascade-based methods.
+- `FBSDE_Code.ipynb` contains the numerical experiments for the singular two-particle moving-boundary FBSDE, including the direct Deep BSDE and cascade-based methods.
 
 ## Running the code
 
