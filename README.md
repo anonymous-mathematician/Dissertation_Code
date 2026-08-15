@@ -17,7 +17,7 @@ It includes
 - the direct application of the same Deep BSDE framework to the singular moving-boundary problem
 - diagnostics illustrating why the direct terminal-loss formulation is insufficient for the singular problem
 
-### `Neural_approximation_attempt.ipynb`
+### `Neural_Approximation_Attempt.ipynb`
 
 This notebook contains the main neural approximation experiments developed for the singular FBSDE.
 
