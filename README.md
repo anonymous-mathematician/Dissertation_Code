@@ -1,55 +1,38 @@
 # Dissertation Code
 
-This repository contains the Python code used for the numerical experiments in Section 4 of my MSc dissertation at the London School of Economics and Political Science.
+This repository contains the Python code used for the numerical experiments in Section 4 of my MSc dissertation.
 
-The dissertation studies a singular forward-backward stochastic differential equation with endogenous moving boundaries and investigates neural approximation methods for the associated restarted cascade.
+The dissertation studies a singular finite-particle FBSDE with endogenous moving boundaries and investigates neural approximation methods based on the recursive cascade of Jettkant and Søjmark.
 
 ## Files
 
-### `Benchmark_and_Direct_application.ipynb`
+### `Benchmark_and_Direct_Application.ipynb`
 
-This notebook contains the preliminary Deep BSDE experiments.
+Contains the preliminary Deep BSDE experiments
 
-It includes
-
-- a Black--Scholes--Barenblatt benchmark used to validate the standard Deep BSDE implementation
-- comparison with analytical and finite-difference reference solutions
-- the direct application of the same Deep BSDE framework to the singular moving-boundary problem
-- diagnostics illustrating why the direct terminal-loss formulation is insufficient for the singular problem
+- Black--Scholes--Barenblatt benchmark with analytical and finite-difference comparisons
+- direct application to the singular \(N=2\) system
+- post-training structural diagnostics for the direct formulation
 
 ### `Neural_Approximation_Attempt.ipynb`
 
-This notebook contains the main neural approximation experiments developed for the singular FBSDE.
+Contains the final restarted cascade implementation
 
-It includes
+- restarted sampling in time and state
+- recursive training and freezing of lower-level fields
+- Brownian-bridge first-passage correction
+- exact terminal completion
+- sorted-coordinate networks
+- \(Z=\sigma\nabla v\) by automatic differentiation
+- \(N=2\) analytical and exact-geometry validation
+- \(N=3\) dimensional-reduction and multiple-boundary consistency checks
 
-- the restarted cascade Deep BSDE method
-- fresh initial conditions across restart times throughout the time interval
-- recursive training of lower-dimensional decoupling fields
-- explicit treatment of first-exit and moving-boundary conditions
-- analytical validation of the singleton level
-- the full two-particle experiment
-- independent Monte Carlo validation of the two-particle decoupling field
-- the three-particle extension
-- symmetry, boundary, terminal and range diagnostics
-- a held-out dimensional-reduction comparison from the three-particle model to the independently trained two-particle model
+The main singular experiments use \(T=\sigma=\alpha=1\), with the \(N=2\) cascade trained on \([1,4]^m\) and the \(N=3\) cascade on \([1,7]^m\).
 
-The two-particle case is the principal numerical experiment. The three-particle case is included to examine whether the recursive construction continues to behave consistently beyond the main two-particle setting.
+The analytical singleton and independent reference calculations are used only for post-training validation and are not supplied as training targets.
 
-## Running the code
+## Notes
 
-The notebooks were run in Google Colab using Python and PyTorch.
+The \(N=2\) experiments provide the main quantitative validation. The \(N=3\) results are intended as consistency checks rather than independent error estimates.
 
-Run the cells in order from the beginning of each notebook. Random seeds, model architectures, optimisation settings, simulation parameters and validation settings used for the dissertation experiments are specified directly in the notebooks.
-
-The main numerical experiments use simulated Brownian paths and therefore benefit substantially from GPU acceleration.
-
-## Reproducibility
-
-The notebooks contain the training and diagnostic code required to reproduce the numerical results reported in Section 4 of the dissertation.
-
-Due to stochastic simulation and neural-network optimisation, small numerical differences may occur between runs even when the same settings are used.
-
-## Dissertation
-
-The accompanying dissertation develops the mathematical moving-boundary and decoupling-field framework before introducing the numerical methods implemented here. The code in this repository is intended to accompany the numerical analysis rather than replace the mathematical arguments given in the dissertation.
+The notebooks contain the code used to generate the numerical results, tables and figures reported in the dissertation.
