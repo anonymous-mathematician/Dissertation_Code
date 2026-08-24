@@ -1,30 +1,18 @@
 # Dissertation Code
 
-This repository contains the Python code used for the numerical experiments in Section 4 of my MSc dissertation.
+Python code for the numerical experiments in Section 4 of my MSc dissertation on a singular
+forward–backward stochastic system with moving boundaries and its neural approximation.
 
-The dissertation studies a singular forward backward stochastic system with moving boundaries and neural approximation methods.
+Both notebooks run top to bottom and print their results. Requires Python 3.10 or later with
+`torch`, `numpy`, `pandas` and `matplotlib`.
 
 ## Files
 
-### Benchmark_and_Direct_Application.ipynb
+**`Benchmark_and_Direct_Application.ipynb`** — Black–Scholes–Barenblatt benchmark against the
+analytical and Crank–Nicolson solutions; direct terminal-loss Deep BSDE applied to the singular
+two-particle system; structural checks on the learned field; independent exact-geometry reference.
 
-Contains
-
-- Black Scholes Barenblatt benchmark
-- analytical and finite difference comparisons
-- direct application to the singular two particle problem
-- post training structural checks
-
-### Neural_Approximation_Attempt.ipynb
-
-Contains
-
-- the restarted neural cascade
-- Brownian bridge first passage correction
-- exact terminal completion
-- sorted coordinate networks
-- automatic differentiation for Z
-- two particle validation
-- three particle consistency checks
-
-The notebooks contain the code used to generate the main numerical results and figures reported in the dissertation.
+**`Neural_Approximation_Attempt.ipynb`** — restarted neural cascade with Brownian-bridge first-passage
+correction, exact terminal completion and `Z = sigma * grad v` by automatic differentiation; `N = 2`
+validation against the analytical singleton and an exact-geometry reference; error propagation, seed
+and volatility studies; `N = 3` consistency checks.
