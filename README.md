@@ -3,9 +3,6 @@
 Python code for the numerical experiments in Section 4 of my MSc dissertation on a singular
 forward–backward stochastic system with moving boundaries and its neural approximation.
 
-Both notebooks run top to bottom and print their results. Requires Python 3.10 or later with
-`torch`, `numpy`, `pandas` and `matplotlib`.
-
 ## Files
 
 **`Benchmark_and_Direct_Application.ipynb`** — Black–Scholes–Barenblatt benchmark against the
