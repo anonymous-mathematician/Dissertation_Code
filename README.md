@@ -1,8 +1,6 @@
 # Dissertation Code
 
-This repository contains the numerical code accompanying Section 4 of my MSc dissertation,
-
-* A Low-Dimensional Analysis of a Singular Forward--Backward Stochastic System with Moving Boundaries and Deep BSDE Approximation.
+This repository contains the numerical code accompanying Section 4 of my MSc dissertation on a singular forward-backward stochastic system with moving boundaries and Deep BSDE approximation.
 
 ## Files
 
