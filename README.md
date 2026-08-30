@@ -1,6 +1,9 @@
 # Dissertation Code
 
-This repository contains the numerical code accompanying Section 4 of my MSc dissertation on a Low-Dimensional Analysis of a Singular Forward–Backward Stochastic System with Moving Boundaries and Deep BSDE Approximation
+This repository contains the numerical code accompanying Section 4 of my MSc dissertation,
+
+* A Low-Dimensional Analysis of a Singular Forward--Backward Stochastic System with Moving Boundaries and Deep BSDE Approximation.
+
 ## Files
 
 ### `Benchmark_and_Direct_Singular.ipynb`
