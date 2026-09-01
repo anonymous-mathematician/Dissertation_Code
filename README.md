@@ -6,7 +6,7 @@ This repository contains the numerical code accompanying Section 4 of my MSc dis
 
 ### `Benchmark_and_Direct_Singular.ipynb`
 
-Contains the Black--Scholes--Barenblatt benchmark, the direct terminal-loss Deep BSDE experiment, structural diagnostics, and the independent two-particle reference calculation.
+Contains the Black-Scholes-Barenblatt benchmark, the direct terminal-loss Deep BSDE experiment, structural diagnostics, and the independent two-particle reference calculation.
 
 ### `Restarted_Neural_Cascade.ipynb`
 
