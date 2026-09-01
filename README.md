@@ -1,6 +1,6 @@
 # Dissertation Code
 
-This repository contains the numerical code accompanying Section 4 of my MSc dissertation on a singular forward-backward stochastic system with moving boundaries and Deep BSDE approximation.
+This repository contains the numerical code accompanying Section 4 of my MSc dissertation on a singular forward-backward stochastic system with moving boundaries and restarted Deep BSDE approximation of the associated PDE cascade.
 
 ## Files
 
